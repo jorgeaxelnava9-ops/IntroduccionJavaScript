@@ -14,3 +14,10 @@ for (let i = 0; i < frutas.length; i++) {
   }
 }
 
+console.log("Cantidad de cada tipo de fruta:");
+
+for (let fruta in contadorFrutas) {
+    console.log(fruta + ": " + contadorFrutas[fruta]);
+    
+}
+
