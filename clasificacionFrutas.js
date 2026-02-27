@@ -4,4 +4,13 @@ const frutas = ["manzana", "plátano", "naranja", "guayaba", "pera", "naranja", 
 
 const contadorFrutas = {};
 
+for (let i = 0; i < frutas.length; i++) {
+  const fruta = frutas[i];
+
+  if (contadorFrutas[fruta]) {
+    contadorFrutas[fruta]++;
+  } else {
+    contadorFrutas[fruta] = 1;
+  }
+}
 
