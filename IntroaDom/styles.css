@@ -16,7 +16,7 @@ body {
 @keyframes gradientBG {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
-    100% {background-position: 0%;}
+    100% {background-position: 0% 50%;}
 }
 
 /*Título */
@@ -29,10 +29,12 @@ h1 {
 /* Formulario estilo vidrio (glassmorphism) */
 form {
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);  /* Soporte Safari */
     background: rgba(255,255,255,0.15);
     padding: 25px;
     border-radius: 20px;
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.3);
     display: flex;
     flex-direction: column;
@@ -41,6 +43,7 @@ form {
 
 /* Textarea */
 textarea {
+    background: rgba(255,255,255,0.9);
     resize: none;
     padding: 12px;
     border-radius: 12px;
@@ -75,12 +78,14 @@ button:hover {
 /* Contenedor comentarios */
 #commentsContainer {
     margin-top: 35px;
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
 }
 
 /* Tarjetas de comentarios */
 .comment {
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     background: rgba(255,255,255,0.2);
     border-radius: 18px;
     padding: 18px;
@@ -105,5 +110,24 @@ button:hover {
 /* Botón eliminar dentro del comentario */
 .comment .deleteBtn {
     margin-top: 10px;
-    
+    background: linear-gradient(45deg, #d63031, #ff7675);
+    font-size: 12px;
+    padding: 6px 10px;
+    transition: all 0.3s ease;  
+}
+
+.comment .deleteBtn:hover {
+    transform:  scale(1.05);
+}
+
+/* Animación aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
