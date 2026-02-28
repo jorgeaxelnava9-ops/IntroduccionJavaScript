@@ -1,21 +1,19 @@
-let nota=85;
+let nota = 88;
 
-if (nota >=0) {
-    console.log("La nota del estudiante es:" + nota);
-}
+if (nota >= 0 && nota <= 100) {
 
-if (nota >=90) {
-    console.log("El estudiantes aprueba con Excelente 🥳🎉");
-}
-else if (nota >=75 && nota <=89) {
-    console.log("El estudiante aprueba con bien 😎");
-}
-else if (nota >=60 && nota <=74) {
-    console.log("El estudiante aprueba con suficiente 🙂");
-}
-else {
-    console.log("El estudiante no aprueba 😔");
-}
-else {
-    console.log("La nota no es válida. ❌❌");
+    console.log("La nota del estudiante es: " + nota);
+
+    if (nota >= 90) {
+        console.log("El estudiante aprueba con ¡¡¡¡¡Excelente 🥳🎉!!!!!");
+    } else if (nota >= 75) {
+        console.log("El estudiante aprueba con ¡¡¡Bien 😎!!!");
+    } else if (nota >= 60) {
+        console.log("El estudiante aprueba con Suficiente 🙂");
+    } else {
+        console.log("El estudiante no aprueba 😔");
+    }
+
+} else {
+    console.log("La nota no es válida ❌❌");
 }
