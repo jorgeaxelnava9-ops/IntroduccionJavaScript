@@ -1,13 +1,13 @@
 let libro = {
-    Título: "Doctor Sueño",
-    Autor: "Stephen King",
-    Año: 2013,
-    Estado: "disponible",
+    titulo: "Doctor Sueño",
+    autor: "Stephen King",
+    anio: 2013,
+    estado: "disponible",
     
     describirLibro: function() {
-        console.log("Libro titulado" + this.titulo +
-            ", escrito por " +this.Autor +
-            "en el año " + this.año +
+        console.log("Libro titulado " + this.titulo +
+            ", escrito por " + this.autor +
+            ", en el anio " + this.anio +
             ", el estado es: " + this.estado + ".");
         }
     };
