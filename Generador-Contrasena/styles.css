@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,8 @@ body {
 
 /*Contenedor tipo glass */
 .container {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     padding: 30px;
     border-radius: 20px;
     background: rgba(255,255,255,0.08);
@@ -91,4 +92,22 @@ input[type="range"] {
 }
 
 /* Botón generar */
+#generateBtn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    background: linear-gradient(90deg, #22ff88, #00ffaa);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#generateBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0,255,170,0.4);
+}
+
+
 
